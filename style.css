@@ -41,9 +41,9 @@ header {
     font-family: "Bebas Neue", sans-serif;
     font-size: clamp(0.66rem, 2vw, 1rem);
     letter-spacing: 0.5em;
-   /* margin-top: -80px;*/
+    /*margin-top: -80px;*/
 }
-
+/*
 section{
     height: 100%;
     width: 100%;
@@ -51,7 +51,7 @@ section{
     position: fixed;
     visibility: hidden;
 }
-
+*/
 section .outder,
 section .inner {
     width: 100%;
@@ -81,4 +81,22 @@ section .bg .clip-text {
 
 .first .bg {
     background-image:url("pexels-arthur-brognoli-2260838.jpg");
+}
+
+
+.second .bg {
+    background-image:url("pexels-ksenia-chernaya-3951790.jpg");
+}
+
+.third .bg {
+    background-image:url("pexels-antonio-sokic-3839432.jpg");
+}
+
+
+.fourth .bg {
+    background-image:url("pexels-darina-belonogova-9167330.jpg");
+}
+
+.fifth .bg {
+    background-image:url("pexels-august-de-richelieu-4427816.jpg");
 }
