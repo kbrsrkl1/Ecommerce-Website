@@ -43,15 +43,15 @@ header {
     letter-spacing: 0.5em;
     /*margin-top: -80px;*/
 }
-/*
-section{
+
+section {
     height: 100%;
     width: 100%;
     top: 0;
+    /*visibility: hidden;*/
     position: fixed;
-    visibility: hidden;
 }
-*/
+
 section .outder,
 section .inner {
     width: 100%;
@@ -80,23 +80,28 @@ section .bg .clip-text {
 }
 
 .first .bg {
-    background-image:url("pexels-arthur-brognoli-2260838.jpg");
+    background-image:linear-gradient(180deg,rgba(0,0,0, 0.6) 0% , rgba(0,0,0,0.3) 100%), url("pexels-arthur-brognoli-2260838.jpg");
 }
 
 
 .second .bg {
-    background-image:url("pexels-ksenia-chernaya-3951790.jpg");
+    background-image:linear-gradient(180deg,rgba(0,0,0, 0.6) 0% , rgba(0,0,0,0.3) 100%), url("pexels-ksenia-chernaya-3951790.jpg");
 }
 
 .third .bg {
-    background-image:url("pexels-antonio-sokic-3839432.jpg");
+    background-image:linear-gradient(180deg,rgba(0,0,0, 0.6) 0% , rgba(0,0,0,0.3) 100%), url("pexels-antonio-sokic-3839432.jpg");
 }
 
 
 .fourth .bg {
-    background-image:url("pexels-darina-belonogova-9167330.jpg");
+    background-image:linear-gradient(180deg,rgba(0,0,0, 0.6) 0% , rgba(0,0,0,0.3) 100%), url("pexels-darina-belonogova-9167330.jpg");
 }
 
 .fifth .bg {
-    background-image:url("pexels-august-de-richelieu-4427816.jpg");
+    background-image:linear-gradient(180deg,rgba(0,0,0, 0.6) 0% , rgba(0,0,0,0.3) 100%), url("pexels-august-de-richelieu-4427816.jpg");
+    background-position: 50% 45%;
+}
+
+h2 * {
+    will-change: transform;
 }
