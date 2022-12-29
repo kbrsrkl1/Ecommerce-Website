@@ -99,6 +99,10 @@ section .bg .clip-text {
 
 .fifth .bg {
     background-image:linear-gradient(180deg,rgba(0,0,0, 0.6) 0% , rgba(0,0,0,0.3) 100%), url("pexels-august-de-richelieu-4427816.jpg");
+}
+
+.sixth .bg {
+    background-image:linear-gradient(180deg,rgba(0,0,0, 0.6) 0% , rgba(0,0,0,0.3) 100%), url("istockphoto-1073935306-612x612.jpg");
     background-position: 50% 45%;
 }
 
