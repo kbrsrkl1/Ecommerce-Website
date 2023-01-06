@@ -127,103 +127,183 @@ body {
     font-size: 15px;
 }
 
-.cont__inner {
-    position: relative;
-    height: 100%;
-}
 
-.cont__inner:hover .el__bg::after {
-    opacity: 1;
-}
-
-.el {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 19.2%;
-    height: 100%;
-    background: #e3e6f3;
-    transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s; z-index: 0s 1.3s;
-    will-change: transform, width, opacity;
-}
-
-.el:not(.s--active) {
-    cursor:pointer;
-}
-
-.el__overflow {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-}
-
-.el__inner {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-    transition: transform 1s;
-}
-
-.cont.s--inactive .el__inner {
-    transform: translate3d(0, 100%, 0);
-}
-
-.el__bg {
-    position: relative;
-    width: calc(100vw - 140px);
-    height: 100%;
-    transition: transform 0.6s 0.7s;
-    will-change: transform;
-}
-
-.el__bg:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: -5%;
-    width: 100%;
-    height: 110%;
-    background-size: cover;
-    background-position: center center;
-    transition: translate3d(0, 0, 0) scale(1);
-}
-
-.cont.s--inactive .el__bg:before { 
-    transform: translate3d(0, -100, 0) scale(1.2);
-}
-
-.el.s--active .el__bg:before {
-    transition: transform 0.8;
-}
-
-.el__bg:after {
-    content: '';
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.cont.s--inactive .el__bg:after {
-    transition: opacity 0.5s 1.4s;
-    opacity: 1 !important;
-}
-
-.el__preview-cont {
-    z-index: 2;
+.content {
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s 1.2s;
+    flex-wrap: nowrap;
 }
 
+.content .item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: all ease 0.8;
+}
+
+.content .item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.content .item:hover{
+    width: 200%;
+}
+
+.content .item .text {
+    position:absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    height: 100%;
+    padding: 50px 50px 100px;
+    color: rgb(102, 98, 98);
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all ease 0.5s 0.2s;
+}
+
+.content .item:hover .text {
+    opacity: 1;
+    bottom: 0;
+}
+
+.content .item .text h3{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-family: "Cormorant Garamond";
+    color: rgb(102, 98, 98);
+}
+
+.content .item .text p{
+    font-family: "Nanum Myeongjo";
+}
+
+
+#feature .fe-box {
+    width: 180px;
+    height: 200px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 25px 25px 38px rgba(0, 0,  0, 0.03);
+    border: 1px solid #cce7cc;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+#feature .fe-box:hover {
+    box-shadow:20px 20px 54px rgba(70, 62, 221, 0.1);
+}
+
+#feature .fe-box h6 {
+    height: 25px;
+    display: inline-block;
+    padding:  6px 20px 10px  20px;
+    border-radius: 6px;
+    color: #088178;
+    background-color:#fddde4;
+    font-size: 13px;
+}
+
+
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #cdebbc;
+}
+
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+
+#feature .fe-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+
+#feature .fe-box:nth-child(6) h6 {
+    background-color: #fff2e5;
+}
+
+#product1{
+    text-align: center;
+
+}
+
+#product1 .pro{
+    width:23% ;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2 ease ;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+} 
+
+#product1 .pro .des span {
+    color: gray;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product1 .pro .icon .bi{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    margin: auto;
+}
